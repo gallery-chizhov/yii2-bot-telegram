@@ -838,4 +838,13 @@ class Telegram extends TelegramBase
         $body = $this->send('/sendInvoice', $params);
         return new Response($body);
     }
+
+    /**
+     * @throws GuzzleException
+     */
+    public function answerPreCheckoutQuery(array $params = []): Response
+    {
+        $body = $this->send('/answerPreCheckoutQuery', $params);
+        return new Response($body);
+    }
 }

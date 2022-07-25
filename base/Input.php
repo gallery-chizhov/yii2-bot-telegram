@@ -6,6 +6,7 @@ use aki\telegram\types\CallbackQuery;
 use aki\telegram\types\Chat;
 use aki\telegram\types\From;
 use aki\telegram\types\Message;
+use aki\telegram\types\PreCheckoutQuery;
 
 class Input extends Type
 {
@@ -20,6 +21,8 @@ class Input extends Type
     private $_from;
 
     private $_chat;
+
+    private $_pre_checkout_query;
 
     public $my_chat_member;
 
@@ -72,5 +75,15 @@ class Input extends Type
     public function setChat($value): void
     {
         $this->_chat = new Chat($value);
+    }
+
+    public function getPre_checkout_query()
+    {
+        return $this->_pre_checkout_query;
+    }
+
+    public function setPre_checkout_query($value): void
+    {
+        $this->_pre_checkout_query = new PreCheckoutQuery($value);
     }
 }
