@@ -830,4 +830,12 @@ class Telegram extends TelegramBase
         return $this->send('/sendMediaGroup', $params);
     }
 
+    /**
+     * @throws GuzzleException
+     */
+    public function sendInvoice(array $params = []): Response
+    {
+        $body = $this->send('/sendInvoice', $params);
+        return new Response($body);
+    }
 }
