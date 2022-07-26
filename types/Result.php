@@ -60,6 +60,8 @@ class Result extends Type
 
     public $forward_sender_name;
 
+    public $invoice;
+
    /**
     * 
     */
